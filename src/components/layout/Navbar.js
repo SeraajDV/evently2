@@ -7,7 +7,7 @@ const Navbar = () => {
     return(
       <nav className="nav-wrapper black">
           <div className="container">
-            <Link to='/' className="brand-logo">Event.ly</Link>
+            <Link to='/' className="brand-logo orange-text">Event.ly</Link>
             <SignedInLinks />
             <SignedOutLinks />
           </div>

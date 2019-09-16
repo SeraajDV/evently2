@@ -16,9 +16,9 @@ class CreateEvent extends Component {
     }
     render() {
         return (
-            <div className="container">
+            <div className="container form">
                 <form onSubmit={this.handleSubmit} className="transparent">
-                    <h5 className="black-text text-darken-3">Create Event</h5>
+                    <h5 className="white-text text-darken-3">Create Event</h5>
                     <div className="input-field">
                         <label htmlFor="title">Title</label>
                         <input type="text" id="title" onChange={this.handleChange} />

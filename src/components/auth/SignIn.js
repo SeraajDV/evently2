@@ -16,16 +16,16 @@ class SignIn extends Component {
     }
     render() {
         return (
-            <div className="container">
+            <div className="container form">
                 <form onSubmit={this.handleSubmit} className="transparent">
-                    <h5 className="black-text text-darken-3">Sign In</h5>
+                    <h5 className="white-text text-darken-3">Sign In</h5>
                     <div className="input-field">
                         <label htmlFor="email">Email</label>
                         <input type="email" id="email" onChange={this.handleChange} />
                     </div>
-                    <div className="input-field">
+                    <div className="input-field paswords">
                         <label htmlFor="password">Password</label>
-                        <input type="password" id="password" onChange={this.handleChange} />
+                        <input className="white-text"  type="password" id="password" onChange={this.handleChange} />
                     </div>
                     <div className="input-field">
                         <button className="btn orange lighten-1 z-depth-0">Login</button>
