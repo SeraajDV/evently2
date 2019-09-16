@@ -4,6 +4,9 @@ import Navbar from './components/layout/Navbar';
 import Dashboard from './components/dashboard/Dashboard';
 import './App.css';
 import EventDetails from './components/events/EventDetails';
+import SignIn from './components/auth/SignIn';
+import SignUp from './components/auth/SignUp';
+import CreateEvent from './components/events/CreateEvent'
 
 function App() {
   return (
@@ -13,6 +16,9 @@ function App() {
       <Switch>
         <Route exact path='/' component={Dashboard} />
         <Route path='/event/:id' component={EventDetails} />
+        <Route path='/signin' component={SignIn} />
+        <Route path='/signup' component={SignUp} />
+        <Route path='/create' component={CreateEvent} />
       </Switch>
     </div>
     </BrowserRouter>
