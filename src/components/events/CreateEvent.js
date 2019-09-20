@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createEvent } from '../../store/actions/eventActions';
 
 class CreateEvent extends Component {
     state = {
         title: '',
-        content: ''
+        description: ''
     }
     handleChange = (e) => {
         this.setState({
@@ -12,7 +14,8 @@ class CreateEvent extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state);
+        // console.log(this.state);
+        this.props.createEvent(this.state);
     }
     render() {
         return (
@@ -24,8 +27,8 @@ class CreateEvent extends Component {
                         <input type="text" id="title" onChange={this.handleChange} />
                     </div>
                     <div className="input-field">
-                        <label htmlFor="content">Description</label>
-                        <textarea id="content" className="materialize-textarea" onChange={this.handleChange}></textarea>
+                        <label htmlFor="description">Description</label>
+                        <textarea id="description" className="materialize-textarea" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
                         <button className="btn orange lighten-1 z-depth-0">Create</button>
@@ -36,4 +39,10 @@ class CreateEvent extends Component {
     }
 }
 
-export default CreateEvent;
+const mapDispatchToProps = (dispatch) => {
+    return {
+        createEvent: (event) => dispatch(createEvent(event))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(CreateEvent);

@@ -1,12 +1,12 @@
 import React from 'react';
 
-const EventSummary = () => {
+const EventSummary = ({event}) => {
     return(
         <div className="card z-depth-0 event-summary">
-            <div className="card-content white text-darken-3">
-                <span className="card-title">Event Title</span>
+            <div className="card-content grey-text text-darken-3">
+                <span className="card-title">{event.title}</span>
                 <p>Posted by the Net Ninja</p>
-                <p className="white-text">11th September, 2am</p>
+                <p className="grey-text">11th September, 2am</p>
             </div>
         </div>
     )
