@@ -1,5 +1,6 @@
 import React from 'react';
 import EventSummary from './EventSummary';
+import { Link } from 'react-router-dom';
 
 const EventList = ({ events }) => {
     console.log(events)
@@ -7,7 +8,9 @@ const EventList = ({ events }) => {
         <div className="event-list section">
             { events && events.map(event => {
                 return(
-                    <EventSummary event={event} key={event.id} />
+                    <Link to={'/event/' + event.id} key={event.id}>
+                        <EventSummary event={event} />
+                    </Link>
                 )
             })}
         </div>

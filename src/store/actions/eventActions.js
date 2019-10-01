@@ -14,4 +14,4 @@ export const createEvent = (event) => {
             dispatch({ type: 'CREATE_EVENT_ERROR', err });
         })
     }
-};
+}

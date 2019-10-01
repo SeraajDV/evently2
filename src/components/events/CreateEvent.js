@@ -16,6 +16,7 @@ class CreateEvent extends Component {
         e.preventDefault();
         // console.log(this.state);
         this.props.createEvent(this.state);
+        this.props.history.push('/');
     }
     render() {
         return (
@@ -24,11 +25,11 @@ class CreateEvent extends Component {
                     <h5 className="white-text text-darken-3">Create Event</h5>
                     <div className="input-field">
                         <label htmlFor="title">Title</label>
-                        <input type="text" id="title" onChange={this.handleChange} />
+                        <input className="white-text" type="text" id="title" onChange={this.handleChange} />
                     </div>
                     <div className="input-field">
                         <label htmlFor="description">Description</label>
-                        <textarea id="description" className="materialize-textarea" onChange={this.handleChange}></textarea>
+                        <textarea id="description" className="materialize-textarea white-text" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
                         <button className="btn orange lighten-1 z-depth-0">Create</button>
