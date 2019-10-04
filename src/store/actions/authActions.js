@@ -11,7 +11,7 @@ export const signIn = (credentials) => {
             dispatch({ type: 'LOGIN_ERROR', err });
         });
     }
-}
+} 
 
 export const signOut = () => {
     return (dispatch, getState, {getFirebase}) => {

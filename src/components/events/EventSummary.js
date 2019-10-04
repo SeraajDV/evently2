@@ -1,12 +1,13 @@
 import React from 'react';
+import moment from 'moment';
 
 const EventSummary = ({event}) => {
     return(
         <div className="card z-depth-0 event-summary">
             <div className="card-content grey-text text-darken-3">
                 <span className="card-title">{event.title}</span>
-                <p>Posted by the Net Ninja</p>
-                <p className="grey-text">11th September, 2am</p>
+                <p>Posted by {event.authorFirstName} {event.authorLastName}</p>
+                <p className="grey-text">{moment(event.createdAt.toDate().toString()).calendar()}</p>
             </div>
         </div>
     )
