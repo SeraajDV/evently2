@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 class CreateEvent extends Component {
     state = {
         title: '',
-        description: ''
+        description: '' 
     }
     handleChange = (e) => {
         this.setState({
