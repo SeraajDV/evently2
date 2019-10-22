@@ -35,6 +35,30 @@ class CreateEvent extends Component {
                         <textarea id="description" className="materialize-textarea white-text" onChange={this.handleChange}></textarea>
                     </div>
                     <div className="input-field">
+                        <label htmlFor="title">Venue</label>
+                        <input className="white-text" type="text" id="venue" onChange={this.handleChange} />
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="title">Date</label>
+                        <input className="white-text datepicker" type="text" id="date" onChange={this.handleChange} />
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="title">Time</label>
+                        <input className="white-text" type="text" id="time" onChange={this.handleChange} />
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="title">Contact details</label>
+                        <input className="white-text" type="text" id="contact" onChange={this.handleChange} />
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="title">Price</label>
+                        <input className="white-text" type="text" id="price" onChange={this.handleChange} />
+                    </div>
+                    <div className="input-field">
+                        <label htmlFor="title">Spots available</label>
+                        <input className="white-text" type="text" id="spots" onChange={this.handleChange} />
+                    </div>
+                    <div className="input-field">
                         <button className="btn orange lighten-1 z-depth-0">Create</button>
                     </div>
                 </form>
